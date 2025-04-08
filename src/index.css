@@ -1,0 +1,368 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  /* Abilita scrolling fluido */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* REGOLE HEADER */
+
+.main-header {
+  display: flex;
+  gap: 100%;
+  padding: 10px;
+  height: 90px;
+
+  position: fixed;
+  z-index: 1000;
+}
+
+/* REGOLE NAVBAR */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  margin-left: 40%;
+
+}
+
+ul li {
+  color: white;
+  display: inline;
+  margin: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 20px;
+  padding-bottom: 20px;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20%;
+
+}
+
+li:hover {
+  border-bottom: 10px solid rgba(216, 118, 40, 0.8);
+
+}
+
+li a:hover {
+  margin-bottom: 5%;
+}
+
+
+
+/* HERO IMG*/
+.container-hero {
+  background-image: url(../public/img/giphy.gif);
+  height: 100vh;
+  background-size: cover;
+  border-radius: 50px;
+  position: relative;
+
+}
+
+/* BOTTONE HERO */
+.buy-now {
+  position: absolute;
+  right: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buy-now button {
+  padding: 50px;
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  background: none;
+  font-size: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.buy-now button:hover {
+  background-color: rgba(216, 118, 40, 0.8);
+  color: black;
+  border: 0px;
+
+}
+
+.button:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+/* REGOLE MAIN */
+.container-main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  margin: 0 auto;
+  /* DEBUG */
+  /* height: 500px; */
+  /* border: 1px solid white; */
+}
+
+/* REGOLE CARD-FIGURES HOMEPAGE */
+#section1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-card-figures {
+  display: flex;
+  flex-direction: column;
+
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: #f5f5f5;
+  height: 100vh;
+  border-radius: 20px;
+  /* DEBUG */
+  /* border: 1px solid white; */
+}
+
+.figures-bg {
+  background: url('../public/img/big-sale.jpg');
+  background-size: cover;
+}
+
+.manga-bg {
+  background: url('../public/img/bg-manga2.jpg');
+  background-size: cover;
+}
+
+.container-title {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  height: 230px;
+  font-size: 70px;
+  border: 2px solid rgb(236, 3, 236);
+  background-size: cover;
+  border-radius: 20px;
+  /* DEBUG */
+  /* border-bottom: 1px solid white; */
+}
+
+.container-title h2 {
+  font-family: "Bangers";
+}
+
+.container-card {
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 15%;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  background: #111;
+  border-radius: 3%;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  box-shadow: 1px 1px 1px 1px rgba(216, 118, 40, 0.8);
+  overflow: hidden;
+  transition: all 0.5s ease;
+
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(0deg,
+      transparent,
+      transparent 30%,
+      rgba(0, 255, 255, 0.3));
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+  z-index: 2;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 2px 2px rgba(216, 118, 40, 0.8);
+  transform: scale(1.05);
+}
+
+.card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.card-wrapper {
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+
+}
+
+.img-card {
+  position: relative;
+  z-index: 0;
+}
+
+.img-card img {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.card-title {
+  margin-bottom: 5%;
+  position: absolute;
+  bottom: 0;
+  color: rgb(236, 3, 236);
+  font-weight: bolder;
+  font-size: 18px;
+
+}
+
+.title-bg {
+  color: black;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  ;
+}
+
+
+/* SEZIONE CONTENUTO CARD DI PAGINA */
+.title-card-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-height: 100%;
+  align-items: center;
+  color: black;
+
+}
+
+.action-page {
+  color: white;
+}
+
+.prova-wh {
+  color: white;
+}
+
+.prova {
+  color: black;
+
+}
+
+.title-manga {
+  color: black;
+  border: 3px solid rgb(255, 174, 0);
+}
+
+.card-title div {
+  margin: 20px;
+}
+
+/* CARD VAI AL NEGOZIO */
+.container-title .container-cart {
+  position: absolute;
+  margin-bottom: 23%;
+  margin-right: 70%;
+  display: none;
+  z-index: 10;
+
+}
+
+.container-title img {
+  max-width: 1000px;
+
+}
+
+
+.container-title:hover .container-cart {
+  display: block;
+}
+
+/* CAROSELLO */
+.carousel-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-card::-webkit-scrollbar {
+  display: none;
+}
+
+.arrow {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: background-color 0.3s easy;
+  z-index: 10;
+  margin-top: 15%;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.arrow.left {
+  margin-right: 10px;
+}
+
+.arrow.left {
+  margin-left: 10px;
+}
