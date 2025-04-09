@@ -27,7 +27,7 @@ const CardMangaHome = () => {
                 <div className="container-card container-manga">
                     <div className="title-card-page">
                         <h3 className="prova">Manga in evidenza</h3>
-                        <div>Sempre aggiornati con le ultime uscite.</div>
+                        <div className="black">Sempre aggiornati con le ultime uscite.</div>
                     </div>
                     <div className="card-wrapper">
                         <div className="card">

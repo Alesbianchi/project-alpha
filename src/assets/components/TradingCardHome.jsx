@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-const CardFiguresHome = () => {
 
+const TradingCardHome = () => {
     const scrollCards = (direction) => {
         const container = document.querySelector(".container-card");
         const scrollAmount = 300;
@@ -12,11 +12,10 @@ const CardFiguresHome = () => {
     };
 
     return (
-
-        <div className="container-card-figures figures-bg">
-            <Link to='/products'>
-                <div className="container-title title-action">
-                    <h2>Action-Figures</h2>
+        <div className="container-card-figures cards-bg">
+            <Link to=''>
+                <div className="container-title title-card">
+                    <h2>CARDS</h2>
                     <div className="container-cart">
                         <img src="../img/rubber-cart.png" alt="" />
                     </div>
@@ -31,13 +30,13 @@ const CardFiguresHome = () => {
                 <button className="arrow left" onClick={() => scrollCards("left")}>&lt;</button>
                 <div className="container-card">
                     <div className="title-card-page action-page">
-                        <h3 className='prova'>Action figures in evidenza</h3>
-                        <div className='white-text'>Sempre aggiornati con le ultime uscite.</div>
+                        <h3 className='prova'>Carte in evidenza</h3>
+                        <div className='white-text'>Sempre aggiornati con gli ultimi arrivi.</div>
                     </div>
                     <div className="card-wrapper">
                         <div className="card">
                             <div className="img-card">
-                                <img src="../img/op7.jpg" alt="" />
+                                <img src="../img/pk-card.jpg" alt="" />
 
                                 <div className="card-title">
                                     <div>Monkey D. Rufy - Gear 5</div>
@@ -49,7 +48,7 @@ const CardFiguresHome = () => {
                     <div className="card-wrapper">
                         <div className="card">
                             <div className="img-card">
-                                <img src="../img/op8.jpg" alt="" />
+                                <img src="../img/ok-card2.jpg" alt="" />
 
                                 <div className="card-title">
                                     <div>Monkey D. Rufy - Gear 5</div>
@@ -61,20 +60,7 @@ const CardFiguresHome = () => {
                     <div className="card-wrapper">
                         <div className="card">
                             <div className="img-card">
-                                <img src="../img/op4.jpg" alt="" />
-
-                                <div className="card-title">
-                                    <div>Monkey D. Rufy - Gear 5</div>
-                                    <div>59,99€</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="card-wrapper">
-
-                        <div className="card">
-                            <div className="img-card">
-                                <img src="../img/op5.jpg" alt="" />
+                                <img src="../img/pk-card3.JPG" alt="" />
 
                                 <div className="card-title">
                                     <div>Monkey D. Rufy - Gear 5</div>
@@ -87,7 +73,7 @@ const CardFiguresHome = () => {
 
                         <div className="card">
                             <div className="img-card">
-                                <img src="../img/op6.jpg" alt="" />
+                                <img src="../img/pk-card4.JPG" alt="" />
 
                                 <div className="card-title">
                                     <div>Monkey D. Rufy - Gear 5</div>
@@ -100,7 +86,20 @@ const CardFiguresHome = () => {
 
                         <div className="card">
                             <div className="img-card">
-                                <img src="../img/op9.jpg" alt="" />
+                                <img src="../img/op-card.jpg" alt="" />
+
+                                <div className="card-title">
+                                    <div>Monkey D. Rufy - Gear 5</div>
+                                    <div>59,99€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card-wrapper">
+
+                        <div className="card">
+                            <div className="img-card">
+                                <img src="../img/op-card2.jpg" alt="" />
 
                                 <div className="card-title">
                                     <div>Monkey D. Rufy - Gear 5</div>
@@ -117,4 +116,4 @@ const CardFiguresHome = () => {
     )
 }
 
-export default CardFiguresHome;
+export default TradingCardHome;

@@ -4,19 +4,27 @@ import HeroImg from "../components/HeroImg"
 import CardFiguresHome from "../components/CardFiguresHome"
 // importo il componente di card manga
 import CardMangaHome from "../components/CardMangaHome"
+//importo il componente carte collezionabili
+import TradingCardHome from "../components/TradingCardHome"
 
 
 const HomePage = () => {
     return (
         <>
             <main>
-                <HeroImg />
+                <section id="section0">
+                    <HeroImg />
+                </section>
+
                 <div className="container-main">
                     <section id="section1">
                         <CardFiguresHome />
                     </section>
                     <section id="section2">
                         <CardMangaHome />
+                    </section>
+                    <section id="section3">
+                        <TradingCardHome />
                     </section>
 
                 </div>

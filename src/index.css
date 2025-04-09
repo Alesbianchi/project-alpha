@@ -87,18 +87,21 @@ li a:hover {
 /* BOTTONE HERO */
 .buy-now {
   position: absolute;
-  right: 40%;
-  top: 50%;
+  right: 45%;
+  top: 88%;
   transform: translate(-50%, -50%);
 }
 
+.pointer-icon {
+  font-size: 35px;
+}
+
 .buy-now button {
-  padding: 50px;
+  padding: 25px;
   border-radius: 100%;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background: none;
-  font-size: 20px;
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -124,7 +127,6 @@ li a:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
   margin: 0 auto;
   /* DEBUG */
   /* height: 500px; */
@@ -159,8 +161,13 @@ li a:hover {
 }
 
 .manga-bg {
-  background: url('../public/img/bg-manga2.jpg');
+  background: url('../public/img/bg-manga-def.jpg');
   background-size: cover;
+}
+
+.cards-bg {
+  background-image: url('../public/img/pk-card6.jpg');
+  background-size: contain;
 }
 
 .container-title {
@@ -173,12 +180,19 @@ li a:hover {
   border: 2px solid rgb(236, 3, 236);
   background-size: cover;
   border-radius: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   /* DEBUG */
   /* border-bottom: 1px solid white; */
 }
 
 .container-title h2 {
   font-family: "Bangers";
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container-card {
@@ -286,20 +300,33 @@ li a:hover {
   align-items: center;
   color: black;
 
+
+}
+
+.title-card-page .white-text {
+  color: white;
+}
+
+.title-card-page div {
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .action-page {
   color: white;
+  text-shadow: 0 0 10px rgb(68, 110, 145, 1), 0 0 20px rgba(68, 110, 145, 1), 0 0 30px rgba(68, 110, 145, 1);
+  animation: glow 1.5s ease-in-out infinite alternate;
 }
 
-.prova-wh {
-  color: white;
-}
-
-.prova {
+.prova-wh div {
   color: black;
-
 }
+
+.black {
+  color: black;
+}
+
+
 
 .title-manga {
   color: black;
@@ -325,9 +352,39 @@ li a:hover {
 
 }
 
+.container-title:hover {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease;
+  background-color: #d76666;
+}
+
+.title-action:hover {
+  background-color: rgb(236, 3, 236);
+}
+
+.title-card:hover {
+
+  background-color: rgba(255, 215, 0, 1);
+}
+
+.title-card {
+  border: 3px solid rgba(255, 215, 0, 1);
+}
+
 
 .container-title:hover .container-cart {
   display: block;
+  transition: all 0.5s ease;
+
+}
+
+.container-title:active {
+  transform: scale(0.65);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.container-title:active {
+  transform: scale(0.9);
 }
 
 /* CAROSELLO */
@@ -365,4 +422,76 @@ li a:hover {
 
 .arrow.left {
   margin-left: 10px;
+}
+
+
+/* REGOLE PAGINA TUTTI I PRODOTTI */
+.product-page {
+  background-image: url(../public/img/bg-product9.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.link-general {
+  text-decoration: none;
+}
+
+/* FOOTER */
+.container-footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/img/bg-footer3.gif');
+  background-color: black;
+  background-size: contain;
+}
+
+.fa-instagram {
+  color: white;
+}
+
+.container-right-footer i {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.container-right-footer div {
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 1), 0 0 30px rgba(0, 0, 0, 1);
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.container-left-footer a {
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 1), 0 0 30px rgba(0, 0, 0, 1);
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.fa-instagram {
+  color: #E1306C;
+  font-size: 25px;
+}
+
+.fa-square-facebook {
+  color: #1877F2;
+  font-size: 25px;
+}
+
+.fa-twitter {
+  color: #1DA1F2;
+  font-size: 25px;
+}
+
+.fa-youtube {
+  color: #FF0000;
+  font-size: 25px;
 }

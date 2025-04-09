@@ -1,6 +1,10 @@
 import { Outlet } from "react-router-dom";
 
+//importo l'header
 import Header from "../components/Header"
+
+//importo il footer
+import Footer from "../components/Footer"
 
 const DefaultLayouts = () => {
     return (
@@ -9,6 +13,7 @@ const DefaultLayouts = () => {
             <main className='container'>
                 <Outlet />
             </main>
+            <Footer />
         </>
 
     )
