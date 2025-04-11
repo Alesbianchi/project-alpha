@@ -5,62 +5,37 @@ const Chatbot = () => {
         // Evita doppio inserimento
         if (document.getElementById("vf-chat-widget")) return;
 
-        (function (d, t) {
-            const v = d.createElement(t);
-            const s = d.getElementsByTagName(t)[0];
+        // Crea lo script per caricare il chatbot
+        const script = document.createElement('script');
+        script.id = "vf-chat-widget";
+        script.type = 'text/javascript';
+        script.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
 
-            v.onload = function () {
-                window.voiceflow.chat.load({
-                    verify: { projectID: '67f90d26695410a77e52e6f7' },
-                    url: 'https://general-runtime.voiceflow.com',
-                    versionID: 'production',
-                    voice: {
-                        url: "https://runtime-api.voiceflow.com"
-                    }
-                });
-            };
-            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-            v.type = "text/javascript";
-            s.parentNode.insertBefore(v, s);
-        })(document, 'script');
+        script.onload = function () {
+            window.voiceflow.chat.load({
+                verify: { projectID: '67f90d26695410a77e52e6f7' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production',
+                voice: {
+                    url: "https://runtime-api.voiceflow.com"
+                }
+            });
+        };
+
+        // Aggiungi lo script al DOM
+        const firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
 
         // Pulizia (opzionale)
         return () => {
-            const script = document.getElementById("vf-chat-widget");
-            if (script) {
-                script.remove();
+            const existingScript = document.getElementById("vf-chat-widget");
+            if (existingScript) {
+                existingScript.remove();
             }
         };
     }, []);
 
-    // Inserire i CSS inline per personalizzare il widget
-    useEffect(() => {
-        const style = document.createElement('style');
-        style.innerHTML = `
-            #vf-chat-widget {
-                background-color: #f0f0f0 !important;
-            }
-
-            .vf-chat-widget__wrapper {
-                background-color: #ffffff !important;
-            }
-
-            .vf-chat-widget__message-container {
-                background-color: #e0e0e0 !important;
-            }
-
-            .vf-chat-widget__launcher {
-                background-color: #ff6600 !important;
-            }
-        `;
-        document.head.appendChild(style);
-
-        return () => {
-            document.head.removeChild(style);
-        };
-    }, []);
-
-    return null; // niente UI da renderizzare
+    return null; // Non c'è bisogno di renderizzare nulla
 };
 
 export default Chatbot;
