@@ -6,6 +6,9 @@ import Header from "../components/Header"
 //importo il footer
 import Footer from "../components/Footer"
 
+//importo il chatbot
+import Chatbot from "../components/Chatbot";
+
 const DefaultLayouts = () => {
     return (
         <>
@@ -14,6 +17,7 @@ const DefaultLayouts = () => {
                 <Outlet />
             </main>
             <Footer />
+            <Chatbot />
         </>
 
     )

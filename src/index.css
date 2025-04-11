@@ -170,6 +170,8 @@ li a:hover {
   background-size: contain;
 }
 
+
+
 .container-title {
   display: flex;
   justify-content: center;
@@ -494,4 +496,59 @@ a {
 .fa-youtube {
   color: #FF0000;
   font-size: 25px;
+}
+
+
+/* CHATBOT */
+.jyiuei2 {
+  background-color: #111;
+}
+
+.jyiuei3 {
+  background-color: #111;
+}
+
+.jyiuei1 {
+  background-color: #111;
+}
+
+#vf-chat-widget {
+  background-color: #090202;
+  /* Cambia con il colore che preferisci */
+}
+
+.vf-chat-widget__wrapper {
+  background-color: #090202;
+  /* Cambia con il colore che preferisci */
+}
+
+/* Cambia il background dei messaggi nel chat */
+.vf-chat-widget__message-container {
+  background-color: #090202;
+  /* Cambia con il colore che preferisci */
+}
+
+.vf-chat-widget__launcher {
+  background-color: #ff6600;
+  /* Cambia con il colore che preferisci */
+}
+
+#vf-chat-widget {
+  background-color: #090202 !important;
+  /* Cambia con il colore che preferisci */
+}
+
+.vf-chat-widget__wrapper {
+  background-color: #090202 !important;
+  /* Cambia con il colore che preferisci */
+}
+
+.vf-chat-widget__message-container {
+  background-color: #090202 !important;
+  /* Cambia con il colore che preferisci */
+}
+
+.vf-chat-widget__launcher {
+  background-color: #ff6600 !important;
+  /* Cambia con il colore che preferisci */
 }
